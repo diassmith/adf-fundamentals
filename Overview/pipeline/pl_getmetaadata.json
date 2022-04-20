@@ -1,0 +1,46 @@
+{
+	"name": "pl_getmetaadata",
+	"properties": {
+		"activities": [
+			{
+				"name": "GetMetadata",
+				"description": "Item Name: Return the name file or folder\n\nItem type: Return if the object is File or Folder\n\nLast Modified: Return the date of last modification \n\nSize: Return the file size in Bytes (It´s used just with file)\n\nStructure: Return the file structure (Column and Type)\n\nExists: Return if the TRUE or FALSE if the file exist\n\nColumn Count: Return the amount column there are in file or table\n\nContentMD5: Return the MD5 code\n\nChild Items: Return a list of sublist of the folder or file\n\n",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_csv_generic",
+						"type": "DatasetReference",
+						"parameters": {
+							"containerNmae": "csvfiles",
+							"fileName": "Cor.csv",
+							"separatorName": ";"
+						}
+					},
+					"fieldList": [
+						"itemType"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			}
+		],
+		"folder": {
+			"name": "adf_activities"
+		},
+		"annotations": []
+	}
+}
