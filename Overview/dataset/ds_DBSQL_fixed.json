@@ -1,5 +1,5 @@
 {
-	"name": "ds_DBSQL_fixes",
+	"name": "ds_DBSQL_fixed",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_DBSQL",
