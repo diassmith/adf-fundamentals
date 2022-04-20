@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "GetMetadata",
+				"description": "Item Name: Return the name file or folder\n\nItem type: Return if the object is File or Folder\n\nLast Modified: Return the date of last modification \n\nSize: Return the file size in Bytes (It´s used just with file)\n\nStructure: Return the file structure (Column and Type)\n\nExists: Return if the TRUE or FALSE if the file exist\n\nColumn Count: Return the amount column there are in file or table\n\nContentMD5: Return the MD5 code\n\nChild Items: Return a list of sublist of the folder or file\n\n",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -25,7 +26,7 @@
 						}
 					},
 					"fieldList": [
-						"itemName"
+						"itemType"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
