@@ -13,7 +13,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[proc_activity_adf01]"
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_DBSQL",
+					"type": "LinkedServiceReference"
+				}
 			},
 			{
 				"name": "proc_update_status",
@@ -33,7 +40,20 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[proc_activity_adf02]",
+					"storedProcedureParameters": {
+						"preco": {
+							"value": "50",
+							"type": "Decimal"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_DBSQL",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"folder": {
