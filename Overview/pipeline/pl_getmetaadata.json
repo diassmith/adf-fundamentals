@@ -26,10 +26,11 @@
 						}
 					},
 					"fieldList": [
-						"itemType"
+						"columnCount"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
