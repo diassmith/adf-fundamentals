@@ -1,3 +1,4 @@
+--Create a new table
 create table table_adf
 (
 id_prod int,
