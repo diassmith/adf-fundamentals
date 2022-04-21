@@ -21,7 +21,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"containerNmae": "csvfiles",
-							"fileName": "Cor.csv",
+							"fileName": "*.csv",
 							"separatorName": ";"
 						}
 					},
