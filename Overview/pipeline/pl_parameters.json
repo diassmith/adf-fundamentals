@@ -1,0 +1,72 @@
+{
+	"name": "pl_parameters",
+	"properties": {
+		"activities": [
+			{
+				"name": "proc_update_dtInsert",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[proc_activity_adf01]"
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_DBSQL",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "proc_update_status",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "proc_update_dtInsert",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[proc_activity_adf02]",
+					"storedProcedureParameters": {
+						"preco": {
+							"value": {
+								"value": "@pipeline().parameters.parameter_value",
+								"type": "Expression"
+							},
+							"type": "Decimal"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_DBSQL",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"parameter_value": {
+				"type": "float"
+			}
+		},
+		"folder": {
+			"name": "adf_activities"
+		},
+		"annotations": []
+	}
+}
