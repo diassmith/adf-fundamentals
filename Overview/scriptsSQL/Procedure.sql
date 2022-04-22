@@ -1,3 +1,5 @@
+
+--Procedure to return States and Cities from Canada with Order ASC
 create proc proc_lookup_adf_fundamentals
 as
 SELECT distinct StateProvince, City From [SalesLT].[Address]
