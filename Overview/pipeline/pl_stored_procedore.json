@@ -18,7 +18,7 @@
 					"storedProcedureName": "[dbo].[proc_activity_adf01]"
 				},
 				"linkedServiceName": {
-					"referenceName": "ls_DBSQL",
+					"referenceName": "ls_dbSQL",
 					"type": "LinkedServiceReference"
 				}
 			},
@@ -51,7 +51,7 @@
 					}
 				},
 				"linkedServiceName": {
-					"referenceName": "ls_DBSQL",
+					"referenceName": "ls_dbSQL",
 					"type": "LinkedServiceReference"
 				}
 			}
@@ -59,6 +59,8 @@
 		"folder": {
 			"name": "adf_activities"
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2022-04-21T03:22:07Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

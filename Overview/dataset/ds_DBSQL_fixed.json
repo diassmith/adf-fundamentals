@@ -2,7 +2,7 @@
 	"name": "ds_DBSQL_fixed",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_DBSQL",
+			"referenceName": "ls_dbSQL",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -52,5 +52,6 @@
 			"schema": "SalesLT",
 			"table": "Address"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

@@ -2,7 +2,7 @@
 	"name": "ds_excel_fixed",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_DataLake",
+			"referenceName": "ls_datalake",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -26,5 +26,6 @@
 				"type": "String"
 			}
 		]
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

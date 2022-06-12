@@ -31,7 +31,6 @@
 						"referenceName": "ds_csv_generic",
 						"type": "DatasetReference",
 						"parameters": {
-							"containerNmae": "csvfiles",
 							"fileName": "Cor.csv",
 							"separatorName": ";"
 						}
@@ -152,6 +151,8 @@
 		"folder": {
 			"name": "adf_activities"
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2022-04-21T00:41:19Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

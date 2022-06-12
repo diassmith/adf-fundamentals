@@ -1,5 +1,5 @@
 {
-	"name": "ds_csv_generic",
+	"name": "ds_parquetfiles_generic",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_datalake",
@@ -11,13 +11,10 @@
 			},
 			"fileName": {
 				"type": "string"
-			},
-			"separatorName": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
@@ -30,13 +27,7 @@
 					"type": "Expression"
 				}
 			},
-			"columnDelimiter": {
-				"value": "@dataset().separatorName",
-				"type": "Expression"
-			},
-			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			"compressionCodec": "snappy"
 		},
 		"schema": []
 	},

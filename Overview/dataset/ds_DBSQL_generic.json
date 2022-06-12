@@ -2,7 +2,7 @@
 	"name": "ds_DBSQL_generic",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_DBSQL",
+			"referenceName": "ls_dbSQL",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -66,5 +66,6 @@
 				"type": "Expression"
 			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }
