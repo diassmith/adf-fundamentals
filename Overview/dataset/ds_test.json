@@ -13,14 +13,30 @@
 				"fileName": "test.csv",
 				"fileSystem": "csvfiles"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": ";",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": [
 			{
-				"name": "Ano;M�s;Vendedor SAP;SKU SAP;CXS",
+				"name": "Ano",
+				"type": "String"
+			},
+			{
+				"name": "M�s",
+				"type": "String"
+			},
+			{
+				"name": "Vendedor SAP",
+				"type": "String"
+			},
+			{
+				"name": "SKU SAP",
+				"type": "String"
+			},
+			{
+				"name": "CXS",
 				"type": "String"
 			}
 		]
