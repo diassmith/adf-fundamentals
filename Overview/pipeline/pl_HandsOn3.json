@@ -121,6 +121,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"TESTE": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "HandsOn3"
 		},
